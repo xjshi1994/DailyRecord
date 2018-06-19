@@ -1,0 +1,20 @@
+1. superset
+	basic operation
+		(a) ctrl + c to exit
+		(b) series == GROUP BY
+		(c) metrics == AGG function
+		superset runserver -d
+	config_path
+		anaconda/envs/superset/lib/python3.4/site-packages/superset中，路径视各位情况可能有差异。在目录下有一个b               叫config.py的文件，打开它，找到Setup default language这一行，修改变量
+2. look up usage of port
+	lsof -i :8088
+3. in unix, mysql treate localhost different. So in order to connect, you should use 127.0.0.1
+4. virtualenv to create clean environment for the application, to avoid collision.
+	(a) virtualenv --no-site-packages venv
+	(b) source venv/bin/activate
+5. zeppelin: online notbook for data analyzing
+6. azkaban
+7. UV: unique vistor PV: page view
+8. mapbox:
+	pk.eyJ1IjoiY29tcHV0ZXJtYW45NCIsImEiOiJjamljeWMzaTEwNjFkM3dxdmJseDJzdjJjIn0.94SCklSMTTUv1xxc_ilbzA
+

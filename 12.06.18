@@ -1,0 +1,10 @@
+1. git merge
+	What is it?
+		It helps to develop new function.
+2. csv location. it is diagonal
+$zubei_data_jd.$A$1:$F$3816
+	left-up corner to right-down corner 
+	$A$1:$F$6
+3. edit APP_NAME.destop and put it into the desktop
+4. hashset.add()
+	return value: return 'true', if there is no such value in previous.

@@ -1,0 +1,34 @@
+insert overwrite table XXX
+select
+
+
+2.
+CREATE TABLE CreditReport
+(
+    requestId bigint PRIMARY KEY,
+    timestamp datetime,
+    creditAmount bigint,
+    creditRating varchar(10),
+    status varchar(50),
+    column_6 int
+);
+
+3. select date_format(timestamp, '%Y-%m-%d') from CreditReport
+4. mysql string left(str, num)
+5. mysql date_format(time, "%Y-%m-%d")
+6. INSERT into `ProdData`.`CreditReport` (`requestId`, `timestamp`, `creditAmount`, `creditRating`, `status`)
+select rid,left(timestamp,10), IFNULL(creditAmount,0),  creditRating, status from ORIGNAL_DAT
+
+7. line chart
+8. mysql copy <null> 
+
+9. concat(str1, 'XXX')
+	add space behind comma
+	
+How to do
+1. create table
+2. insert overwrite
+3. 3 chart
+	line chart: insert SQL where status != "CREDIT_FAILURE"
+	USER_CLASS_PIE : insert SQL where status != "CREDIT_FAILURE"
+

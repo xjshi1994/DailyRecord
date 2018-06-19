@@ -1,0 +1,6 @@
+1. Java project default path is the root of the project
+2. MalformedInputException is problem of charset
+	Solution: private final static DEFAULT_CHARSET = Charset.forName("GBK");
+	
+Appache Commmon csv
+ 

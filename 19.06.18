@@ -1,0 +1,19 @@
+1. mysql日期比较
+	select * from mongo.ProdDatalog where timestamp > DATE_FORMAT('2018-5-30', '%Y-%m-%d');
+	WHERE DATE_FORMAT(st.create_time,'%Y-%m-%d %H:%i')>=DATE_FORMAT('2017-12-9 10:29:00','%Y-%m-%d %H:%i')；
+2. mysql create index
+	(a) when creating table
+		create table genius (uid BIGINT, name VARCHAR(100), index index_uid (uid))
+	(b) after creating table
+		alter table genius add index index_name (name)
+3. put setting into the file
+	(a) create "XXX.properties" file in local disk
+	(b) write properties into the file eg. name = David Laid
+	(c) instantial a object eg Properties properties = new properties();
+	(d) Reader, InputStream 1. Files.newBufferedReader(Paths.get(URI)) 2. FileInputStream fileInputStream = new FileInputStream("URI");
+	(e) properties.load(reader)
+	(f) properties.getProperty("Key")
+4. intellj install plugins
+	files->setting->plugins
+5. Linux copy directory: cp -r
+6. file not exists will create new file when using common CSV
