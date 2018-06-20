@@ -27,4 +27,6 @@
 6. file not exists will create new file when using common CSV
 7. InnoDb MyIsam	
 8. scala
-	(a) var mutable; val immutable 
+	(a) var mutable; val immutable
+	(b) var multiply = (i:Int) => i * 3
+	(c) var c = new Array[String](3) 
