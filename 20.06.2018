@@ -1,0 +1,11 @@
+1. ETL: extract transform load
+2. multi line in scala 
+	Multiline strings in Scala have to be enclosed using triple quotes:
+
+	hiveContext.sql("""
+	    select linestatus, sum(quantity) as sum_qty,count(*) as count_order 
+	    from lineitem
+	    where shipdate <= '1990-09-16' group by linestatus order by linestatus""")
+3. google 
+
+4. sniplet and maven pom
