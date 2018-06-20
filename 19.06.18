@@ -1,6 +1,14 @@
 1. mysql日期比较
 	select * from mongo.ProdDatalog where timestamp > DATE_FORMAT('2018-5-30', '%Y-%m-%d');
 	WHERE DATE_FORMAT(st.create_time,'%Y-%m-%d %H:%i')>=DATE_FORMAT('2017-12-9 10:29:00','%Y-%m-%d %H:%i')；
+	
+	// more general
+	https://stackoverflow.com/questions/30076888/unable-to-compare-dates-in-spark-sql-query
+	// converse a timestamp to date
+	cast(timestamp as date)
+	// compare
+	where timestamp > cast ('2018-05-30' as date)
+
 2. mysql create index
 	(a) when creating table
 		create table genius (uid BIGINT, name VARCHAR(100), index index_uid (uid))
@@ -17,3 +25,6 @@
 	files->setting->plugins
 5. Linux copy directory: cp -r
 6. file not exists will create new file when using common CSV
+7. InnoDb MyIsam	
+8. scala
+	(a) var mutable; val immutable 
