@@ -1,0 +1,4 @@
+* In superset, it is not allowed to use '-' in the name of chart
+* mysql avg, sum automatically remove null value
+* count(if status = 'CREDIT_SUCCESS', 1, null)
+* table view, go to style to change the display format of date(in previous page, tick the 'include time' to add column)
