@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=DataGrip
+Comment=DataGrip-1.0.2
+Exec=/opt/datagrip/DataGrip-1.0.2/bin/datagrip.sh
+Icon=/opt/datagrip/DataGrip-1.0.2/bin/product.png
+Terminal=false
+Type=Application
+Categories=Development;
+# Name 快捷方式的名称
+# Exec 程序启动命令的路径
+# Icon 快捷方式的图标路径
+给datagrip.desktop文件添加可执行权限：
+
+sudo chmod +x datagrip.desktop 

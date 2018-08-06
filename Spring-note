@@ -1,0 +1,72 @@
+applicationContext.xml
+<bean id = " " class = "com.sxj.Controller.Student">
+	<constructor-arg index = "0" value = "sxj">
+	<constructor-arg index = "1" value = "23">
+	<property name = "name" value = "computerman94">
+<\bean>
+属性注入：创建对象时， 向类对象的属性设置属性值。
+1. 参数构造函数
+	<constructor-arg></constructor-arg>
+2.使用set方法注入属性
+	<property name = "name" value = "sxj"></property>
+3.p 空间
+
+4.注解插入
+
+spring threed level
+1. DAO层专门负责数据库的增删改查
+2. Service 业务的判断
+3. controller接受用户请求 和页面交互
+
+Controller --> Service --> Dao
+
+
+---------------------
+1. service mysql status -> check whether mysql works or not
+2. how to create database
+	1. create database
+	2. use graph to create table 
+	3. insert into students(sid, name, age) value (1, "sxj", 24)
+3. jdbc connect with database;
+	Pre: JDBC_DRIVER = "com.mysql.jdbc.Driver", JDBC_URL = "jdbc:mysql://localhost:3306/University", USER, PASSWORD
+	(1) load driver -> Class.forName(JDBC_DRIVER)
+	(2) connect -> create Connection instance then, DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD)
+	(3) pass the sql statement -> create Statement instance, stmt.executeQuery(sql);
+	(4) get Result -> create ResultSet rs
+	(5) parse the result -> while(rs.hasNext()) rs.getInt() rs.getString(Attribute name)
+	(6) close rs stmt conn
+
+4.(a)
+Your connection URL should look like the below,
+
+jdbc:mysql://localhost:3306/Peoples?autoReconnect=true&useSSL=false
+This will disable SSL and also suppress the SSL errors.
+
+(b) serverTimezone=GMT
+(c) "com.mysql.cj.jdbc.Driver";  new driverName
+5. what is the differences between statement and PreparedStatement
+ps = conn.preparedStatement("insert into students(sid, name, age) value (?, ?, ?)");
+int sid = 2;
+int name = "david laid"
+int age = 20;
+ps.setInt(1, sid);
+ps.setString(2, name);
+ps.setInt(3, age);
+rs = ps.excuteQuery();
+6. DBHelper
+7. the exectution of Statement
+	(a) select ->excuteQuery() -> return ResultSet
+	(b) insert update delete -> excuteUpdate() -> return int(# of rows effected)
+	(c) everything -> exectute() -> boolean(T means return resultSet) -> stmt.getResultSet()
+8. set SSH of Github -> https://www.cnblogs.com/ayseeing/p/3572582.html
+9. get->query post-> put-> delete->
+10. knowledge of git merge
+	(a)   git checkout -b dev 
+		equals git branch dev + git checkout dev
+
+
+	(b) merge branch -> git merge <name>
+	(c) delete branch -> git branch -d <name>
+	(d) if there is conflict, edit by yourself.
+
+	

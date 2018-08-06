@@ -1,0 +1,17 @@
+生产数仓临时环境已经搭建完成，地址信息如下
+spark master web： http://172.29.32.132:8080/
+zeppelin ： http://172.29.32.131:8887
+meta ： http://172.29.32.131:5000
+azkaban ： http://172.29.32.131:8081
+superset： http://172.29.32.131:8015/superset/welcome
+
+
+c   S5wpRl884JjT
+数据库
+172.29.8.71:4000
+
+
+
+document.querySelector('input[name="username"]').value = 'xiaojie.shi'
+document.querySelector('input[name="password"]').value = 'Qzpmwxon1234,'
+document.querySelector('form').submit()

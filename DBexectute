@@ -1,0 +1,34 @@
+To work with batches effectively you should turn AutoCommit option off and turn it on after executing the batch (or alternatively use connection.commit() method)
+
+connection.setAutoCommit(false);
+while(rs.next())
+    {
+     .....
+     ps.addBatch();     
+    }
+int[] results = ps.executeBatch();
+connection.setAutoCommit(true);
+
+
+public boolean addSetOfRecords(String tableName, Set<MyObject> objects) {
+    StringBuffer sql = new StringBuffer("INSERT INTO " + tableName + " VALUES (?,?,?,?)");
+    for(int i=1;i<objects.size();i++) {
+        sql.append(",(?,?,?,?)");
+    }
+    try {
+        PreparedStatement p = db.getConnection().prepareStatement(sql.toString());
+        int i = 1;
+        for(MyObject obj : objects) {
+            p.setString(i++, obj.getValue());
+            p.setString(i++, obj.getType());
+            p.setString(i++, obj.getId());
+            p.setDate(i++, new Date(obj.getRecordDate().getTime()));
+        }
+        p.execute();
+        p.close();
+        return true;
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return false;
+    }
+}
